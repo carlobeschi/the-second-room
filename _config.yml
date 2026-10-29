@@ -7,7 +7,7 @@ url: https://carlobeschi.github.io   # https://<your-domain> once a custom domai
 baseurl: /the-second-room   # github.io project page; set to "" with a custom domain
 lang: en-GB
 
-ko_fi: https://ko-fi.com/thesecondroom   # placeholder until the handle is registered
+ko_fi: https://ko-fi.com/carlobeschi
 supporter_price: £4 a month
 producer: The producer                   # shown on About; keep anonymous unless decided otherwise
 license: CC BY 4.0
