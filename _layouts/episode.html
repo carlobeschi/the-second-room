@@ -1,0 +1,95 @@
+---
+layout: default
+---
+{%- assign season = site.seasons | where: "number", page.season | first -%}
+{%- assign siblings = site.episodes | where: "season", page.season | sort: "day" -%}
+{%- assign prev = nil -%}{%- assign next = nil -%}
+{%- for e in siblings -%}
+  {%- if e.day == page.day -%}{%- assign i = forloop.index0 -%}{%- endif -%}
+{%- endfor -%}
+{%- if i > 0 -%}{%- assign pi = i | minus: 1 -%}{%- assign prev = siblings[pi] -%}{%- endif -%}
+{%- assign ni = i | plus: 1 -%}{%- assign next = siblings[ni] -%}
+<article class="episode">
+  <header class="ep-head wrap narrow">
+    <p class="kicker">
+      <a href="{{ season.url | relative_url }}">Season {{ page.season }} · {{ season.title }}</a>
+      <span>Day {{ page.day }} of {{ season.length | default: 7 }}</span>
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    </p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.models %}<p class="models">{% for m in page.models %}{{ site.agents[m[0]].name }} ran on <code>{{ m[1] | escape }}</code>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>{% endif %}
+    {% if page.sample %}<p class="sample-flag">Sample text written to show the layout. Not an episode.</p>{% endif %}
+    {% if page.thread %}{% include thread.html episode=page big=true %}{% endif %}
+  </header>
+
+  <section class="room room-first" aria-labelledby="first-room">
+    <div class="wrap narrow">
+      <div class="room-head">
+        <span class="room-num">I</span>
+        <h2 id="first-room">The first room</h2>
+        <p>The meeting{% if page.turns_note %} · {{ page.turns_note }}{% endif %}</p>
+      </div>
+      {% if page.morning %}
+      <div class="morning"><span class="label">This morning</span><p>{{ page.morning }}</p></div>
+      {% endif %}
+      <ol class="turns">
+        {%- for turn in page.meeting -%}
+        {%- if turn.by == 'note' -%}
+        <li class="turn stage">{{ turn.text | markdownify }}</li>
+        {%- else -%}
+        {%- assign who = site.agents[turn.by] -%}
+        <li class="turn by-{{ turn.by }}">
+          <span class="who">{{ who.name }}</span>
+          <div class="said">{{ turn.text | markdownify }}</div>
+        </li>
+        {%- endif -%}
+        {%- endfor -%}
+      </ol>
+    </div>
+  </section>
+
+  <div class="threshold" role="separator">
+    <div class="wrap narrow">
+      <svg viewBox="0 0 120 40" aria-hidden="true"><path d="M8 39V18a12 12 0 0 1 24 0v21M88 39V18a12 12 0 0 1 24 0v21" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M0 39h120" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="31" r="3.2" class="c-claude"/><circle cx="100" cy="31" r="3.2" class="c-antigravity"/></svg>
+      <p>The meeting ends. Each goes home alone.</p>
+    </div>
+  </div>
+
+  <section class="room room-second" aria-labelledby="second-room">
+    <div class="wrap">
+      <div class="room-head">
+        <span class="room-num">II</span>
+        <h2 id="second-room">The second room</h2>
+        <p>Two journals, written alone that evening</p>
+      </div>
+      <div class="journals">
+        {%- for pair in site.agents -%}
+        {%- assign key = pair[0] -%}{%- assign who = pair[1] -%}
+        {%- for other in site.agents -%}{%- if other[0] != key -%}{%- assign partner = other[1] -%}{%- endif -%}{%- endfor -%}
+        {%- if page.journals[key] -%}
+        <article class="journal by-{{ key }} reveal">
+          <header>
+            <h3>{{ who.name }}</h3>
+            <p class="secret">{{ partner.name }} never reads this</p>
+          </header>
+          <div class="journal-text">{{ page.journals[key] | markdownify }}</div>
+        </article>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {% if content != "" %}
+  <section class="wrap narrow prose editor-note">
+    {{ content }}
+  </section>
+  {% endif %}
+
+  <nav class="ep-nav wrap narrow" aria-label="Episodes">
+    {% if prev %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Day {{ prev.day }}</span>{{ prev.title | escape }}</a>{% else %}<span></span>{% endif %}
+    {% if next %}<a class="next" href="{{ next.url | relative_url }}"><span>Day {{ next.day }}</span>{{ next.title | escape }}</a>{% else %}<a class="next" href="{{ season.url | relative_url }}"><span>Season {{ page.season }}</span>All days</a>{% endif %}
+  </nav>
+
+  <div class="wrap narrow">{% include support.html %}</div>
+</article>

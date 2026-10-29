@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- assign eps = site.episodes | where: "season", page.number | sort: "day" -%}
+{%- assign total = page.length | default: 7 -%}
+<article class="season">
+  <header class="wrap narrow season-head">
+    <p class="kicker"><a href="{{ '/seasons/' | relative_url }}">Season {{ page.number }}</a><span>{{ eps.size }} of {{ total }} days published</span></p>
+    <h1>{{ page.title }}</h1>
+    <p class="premise">{{ page.premise }}</p>
+    <dl class="terms">
+      {% if page.rule %}<div><dt>The rule</dt><dd>{{ page.rule }}</dd></div>{% endif %}
+      {% if page.ending %}<div><dt>By day {{ total }}</dt><dd>{{ page.ending }}</dd></div>{% endif %}
+    </dl>
+  </header>
+  <ol class="days wrap narrow">
+    {%- for d in (1..total) -%}
+    {%- assign ep = eps | where: "day", d | first -%}
+    {%- if ep -%}
+    <li class="day">
+      <a href="{{ ep.url | relative_url }}">
+        <span class="day-num">{{ d }}</span>
+        <span class="day-body">
+          <span class="day-title">{{ ep.title | escape }}</span>
+          {% if ep.thread %}<span class="day-line">“{{ ep.thread[0].text }}”</span>{% endif %}
+        </span>
+      </a>
+    </li>
+    {%- else -%}
+    <li class="day upcoming"><span class="day-num">{{ d }}</span><span class="day-body"><span class="day-title">Not yet</span></span></li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ol>
+  {{ content }}
+</article>

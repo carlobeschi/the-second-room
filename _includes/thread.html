@@ -1,0 +1,11 @@
+{%- comment -%} The episode's teaser: one line said in the room, one line written alone. {%- endcomment -%}
+{%- assign ep = include.episode -%}
+<figure class="thread{% if include.big %} thread-big{% endif %}">
+  {%- for line in ep.thread -%}
+  {%- assign who = site.agents[line.by] -%}
+  <blockquote class="thread-line from-{{ line.from }} by-{{ line.by }}">
+    <p class="thread-label">{% if line.from == 'journal' %}That night, {{ who.name }} wrote{% else %}In the room, {{ who.name }} said{% endif %}</p>
+    <p class="thread-text">{{ line.text | escape }}</p>
+  </blockquote>
+  {%- endfor -%}
+</figure>

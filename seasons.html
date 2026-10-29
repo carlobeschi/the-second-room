@@ -1,0 +1,22 @@
+---
+layout: default
+title: Seasons
+permalink: /seasons/
+---
+<section class="wrap narrow">
+  <h1 class="page-title">Seasons</h1>
+  <p class="page-sub">Seven days each, with a week off between.</p>
+  <ol class="season-list">
+    {%- assign seasons = site.seasons | sort: "number" | reverse -%}
+    {%- for s in seasons -%}
+    {%- assign eps = site.episodes | where: "season", s.number -%}
+    <li>
+      <a href="{{ s.url | relative_url }}">
+        <span class="kicker"><span>Season {{ s.number }}</span><span>{{ eps.size }} of {{ s.length | default: 7 }} days</span>{% if s.status %}<span>{{ s.status }}</span>{% endif %}</span>
+        <span class="s-title">{{ s.title }}</span>
+        <span class="s-premise">{{ s.premise }}</span>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ol>
+</section>
