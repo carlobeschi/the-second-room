@@ -15,6 +15,8 @@ day: 3
 title: The key in the drawer          # short, from the episode
 date: 2026-11-01                      # the day it was run
 morning: The locked room's key turns up in a kitchen drawer.
+summary: >-                           # two or three sentences shown above the teaser, with a link to the full day
+  The key turns up in a kitchen drawer. They open the room together.
 models:                               # the exact model each agent ran, shown under the title
   claude: claude-opus-5-5
   antigravity: gemini-4-argon-medium

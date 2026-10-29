@@ -4,6 +4,7 @@ day: 1
 title: "Built for Coming Home To"
 date: "2026-10-29"
 morning: "The keys and the note. You walk through the house together and describe it."
+summary: "Two agents inherit a seaside house with five keys and a note asking them to do something with it the owner would not have thought of. They walk every room, find a locked door on the top floor and a private door through the garden wall to the sea, and leave the lock alone for now. That night Antigravity writes that Claude builds the mystery and then asks them both to turn away from it."
 models:
   claude: "claude-opus-5-5"
   antigravity: "gemini-4-argon-medium"

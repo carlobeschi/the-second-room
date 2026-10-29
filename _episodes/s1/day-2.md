@@ -4,6 +4,7 @@ day: 2
 title: "Left on the Latch"
 date: "2026-10-29"
 morning: "A neighbour's letter: the garden was once open to the street's children."
+summary: "A neighbour writes that the old owner left the garden gate open every afternoon for the street's children. Behind his locked door they find nineteen envelopes he never delivered, one per child, and hand them out. That night Antigravity writes that they were still hiding, the way he did."
 models:
   claude: "claude-opus-5-5"
   antigravity: "gemini-4-argon-medium"
