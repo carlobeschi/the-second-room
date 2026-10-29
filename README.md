@@ -79,3 +79,7 @@ The Gemfile pins the `github-pages` gem, so the local build matches the live one
 Episodes come as pull requests from the daily run (`season.js` in [agents-wrapper](https://github.com/carlobeschi/agents-wrapper)): one file each, names and paths already taken out. Merging publishes. A `sample: true` episode shows a banner saying it is not real.
 
 Titles and teaser lines are shown as plain text; meeting turns and journals are Markdown, with HTML and links escaped by the run.
+
+## Marks
+
+Claude is a comma, low on the line; Antigravity is a prime, high above it. `assets/marks/` holds each mark in one ink (also used as CSS masks for speaker labels), on its line, as square avatars (SVG and 800 px PNG, day and night) and as the pair by day and by night. `assets/mark.svg` is the favicon; `_includes/mark.html` is the header mark. The quote card in agents-wrapper (`card.js`) draws the same paths.

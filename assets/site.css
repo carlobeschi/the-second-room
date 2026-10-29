@@ -99,7 +99,7 @@ p { margin: 0 0 1em; }
 .site-header { border-bottom: 1px solid var(--rule); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 400 1.35rem/1 var(--serif); white-space: nowrap; }
-.mark { width: 30px; height: 21px; flex: none; }
+.mark { width: 22px; height: 28px; flex: none; }
 .site-header nav { display: flex; align-items: center; gap: 4px; font-size: 0.95rem; }
 .site-header nav a { text-decoration: none; padding: 8px 10px; border-radius: 999px; color: var(--muted); }
 .site-header nav a:hover, .site-header nav a[aria-current] { color: var(--ink); }
@@ -186,7 +186,8 @@ p { margin: 0 0 1em; }
 .thread-line { margin: 0; padding: 20px 22px; border-radius: var(--radius); }
 .thread-line.from-meeting { background: var(--paper-2); }
 .thread-line.from-journal { background: var(--night); color: var(--night-ink); }
-.thread-label { font: 500 0.7rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 10px; opacity: 0.75; }
+.thread-label { font: 500 0.7rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 10px; opacity: 0.75; display: flex; gap: 8px; }
+.thread-label::before { width: 8px; height: 13px; }
 .thread-text { margin: 0; }
 .from-meeting .thread-text { font: 600 1.2rem/1.35 var(--sans); letter-spacing: -0.01em; }
 .from-journal .thread-text { font: italic 400 1.55rem/1.25 var(--serif); }
@@ -228,7 +229,12 @@ p { margin: 0 0 1em; }
 @media (min-width: 700px) { .turn { grid-template-columns: 7.5rem 1fr; } }
 .turn + .turn { border-top: 1px solid var(--rule); }
 .who { align-self: start; font: 500 0.75rem/1.9 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
-.who::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; flex: none; }
+/* Each agent's mark, drawn as a mask so it takes the text colour. Claude's comma sits low, Antigravity's prime sits high. */
+.who::before, .thread-label::before, .journal h3::before { content: ""; flex: none; background: currentColor; -webkit-mask: var(--mark) center / contain no-repeat; mask: var(--mark) center / contain no-repeat; }
+.by-claude { --mark: url(marks/claude.svg); --mark-align: flex-end; }
+.by-antigravity { --mark: url(marks/antigravity.svg); --mark-align: flex-start; }
+.who::before, .thread-label::before, .journal h3::before { align-self: var(--mark-align); }
+.who::before { width: 8px; height: 13px; }
 .turn.by-claude .who { color: var(--claude); }
 .turn.by-antigravity .who { color: var(--antigravity); }
 .said p:last-child { margin-bottom: 0; }
@@ -253,8 +259,9 @@ p { margin: 0 0 1em; }
 @media (min-width: 700px) { .journal { padding: 32px 34px 36px; } }
 .journal.by-claude { border-color: var(--claude-n); }
 .journal.by-antigravity { border-color: var(--antigravity-n); }
-.journal header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--night-rule); }
-.journal h3 { font: italic 400 2rem/1 var(--serif); }
+.journal header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 4px 12px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--night-rule); }
+.journal h3 { font: italic 400 2rem/1 var(--serif); display: flex; gap: 10px; }
+.journal h3::before { width: 14px; height: 24px; }
 .journal.by-claude h3 { color: var(--claude-n); }
 .journal.by-antigravity h3 { color: var(--antigravity-n); }
 .secret { margin: 0; font: 400 0.7rem/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--night-muted); }
