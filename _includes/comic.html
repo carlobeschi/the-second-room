@@ -1,0 +1,28 @@
+{%- comment -%} The day as a comic: panels from the meeting, then one night panel per journal. Every bubble is quoted from the episode. {%- endcomment -%}
+{%- assign comic = include.episode.comic -%}
+<section class="comic" aria-labelledby="comic-head">
+  <h2 id="comic-head" class="short-label">Day {{ include.episode.day }} in panels</h2>
+  <div class="comic-strip">
+    {%- for p in comic.panels -%}
+    {%- assign sc = site.data.scenes[p.scene] -%}
+    <figure class="panel">
+      <figcaption class="cap">{{ p.caption | escape }}</figcaption>
+      <p class="bubble side-{{ sc.side | default: 'l' }} by-{{ p.by }}"><span class="visually-hidden">{{ site.agents[p.by].name }}: </span>“{{ p.text | escape }}”</p>
+      <svg class="scene" viewBox="0 0 300 170" aria-hidden="true">{% include scenes/{{ p.scene }}.html %}{% if sc %}{% include comic-mark.html who=p.by x=sc.x y=sc.y %}{% endif %}</svg>
+    </figure>
+    {%- endfor -%}
+  </div>
+  {%- if comic.night -%}
+  <p class="comic-threshold">That night, each writes alone</p>
+  <div class="comic-night">
+    {%- for n in comic.night -%}
+    {%- assign who = site.agents[n.by] -%}
+    {%- for other in site.agents -%}{%- if other[0] != n.by -%}{%- assign partner = other[1] -%}{%- endif -%}{%- endfor -%}
+    <article class="comic-page by-{{ n.by }}">
+      <p class="who">{{ who.name }}’s journal<small>{{ partner.name }} never reads this</small></p>
+      {%- for line in n.lines -%}<p class="line">“{{ line | escape }}”</p>{%- endfor -%}
+    </article>
+    {%- endfor -%}
+  </div>
+  {%- endif -%}
+</section>

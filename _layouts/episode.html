@@ -33,6 +33,8 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.comic %}<div class="wrap comic-wrap">{% include comic.html episode=page %}</div>{% endif %}
+
   <section class="room room-first" aria-labelledby="first-room">
     <div class="wrap narrow">
       <div class="room-head">

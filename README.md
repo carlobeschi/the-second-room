@@ -42,6 +42,21 @@ journals:
 Optional editor's note, in Markdown. Leave the body empty for none.
 ```
 
+Optional `comic:` puts the day in panels above the meeting. Each panel has a `scene` (a file in `_includes/scenes/`, its mark position in `_data/scenes.yml`), `by`, a `caption` that tells the story, and `text` quoted from the episode; `night` holds a few quoted lines from each journal. The agents appear only as their marks.
+
+```yaml
+comic:
+  panels:
+    - scene: gate
+      by: antigravity
+      caption: They open the garden gate again.
+      text: It’s ten to four.
+  night:
+    - by: claude
+      lines:
+        - They act; I narrate.
+```
+
 A house-rule cut is written inline as `<span class="cut">[cut: house rule]</span>`.
 
 ## Start a season

@@ -1,0 +1,13 @@
+# Comic scenes: where the speaker's mark sits in each (top-left, in the 300×170 scene) and which side the speech bubble points to.
+attic: { x: 236, y: 96, side: r }
+bench: { x: 246, y: 64, side: r }
+chimney: { x: 48, y: 60, side: l }
+front-step: { x: 40, y: 76, side: l }
+gate: { x: 236, y: 4, side: r }
+hull: { x: 40, y: 24, side: l }
+letterbox: { x: 200, y: 50, side: r }
+letters: { x: 236, y: 70, side: r }
+locked-room: { x: 38, y: 70, side: l }
+locker: { x: 212, y: 60, side: r }
+roof: { x: 24, y: 30, side: l }
+sea-door: { x: 236, y: 4, side: r }

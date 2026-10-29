@@ -17,6 +17,7 @@
   --night-rule: #343b52;
   --claude-n: #f2b54e;
   --antigravity-n: #93acff;
+  --bubble: #ffffff;
 
   --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
@@ -38,6 +39,7 @@
     --night: #0a0d17;
     --night-2: #141a2a;
     --night-rule: #2a2d42;
+    --bubble: #232a2b;
     color-scheme: dark;
   }
 }
@@ -52,6 +54,7 @@
   --night: #0a0d17;
   --night-2: #141a2a;
   --night-rule: #2a2d42;
+  --bubble: #232a2b;
   color-scheme: dark;
 }
 
@@ -206,6 +209,39 @@ p { margin: 0 0 1em; }
 .short-more a { font-weight: 600; }
 .short-more a::after { content: " ↓"; }
 .short-more span { font: 500 0.75rem/1.4 var(--mono); color: var(--muted); }
+
+/* Comic: the day in panels. Speakers are their marks only, never figures. */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.comic-wrap { max-width: 1000px; }
+.comic { margin: 8px 0 48px; display: grid; gap: 12px; }
+.comic-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 760px) { .comic-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .comic-strip { grid-template-columns: 1fr; } }
+.panel { margin: 0; border: 2px solid var(--ink); background: var(--paper-2); display: flex; flex-direction: column; min-width: 0; }
+.panel .cap { margin: 0; padding: 7px 10px; font: 500 0.68rem/1.4 var(--mono); letter-spacing: 0.04em; background: var(--paper); border-bottom: 2px solid var(--ink); }
+.bubble { position: relative; margin: 12px 12px 0; padding: 10px 12px; background: var(--bubble); border: 1.5px solid var(--ink); border-radius: 16px; font: 600 0.95rem/1.32 var(--sans); }
+.bubble::after { content: ""; position: absolute; bottom: -8px; width: 14px; height: 14px; background: var(--bubble); border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); transform: rotate(45deg); }
+.bubble.side-l::after { left: 34px; }
+.bubble.side-r::after { right: 34px; }
+.scene { display: block; width: 100%; height: auto; margin-top: auto; color: var(--ink); }
+.scene .ln { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.scene .ln.fill, .scene .fill { fill: var(--paper); }
+.scene .lt { fill: none; stroke: var(--rule); stroke-width: 1.4; }
+.scene text { font: 500 9px var(--mono); fill: var(--muted); }
+.scene .sfx { font: italic 400 22px var(--serif); fill: var(--ink); }
+.mk-claude { fill: var(--claude); }
+.mk-antigravity { fill: var(--antigravity); }
+.comic-threshold { display: flex; align-items: center; gap: 12px; margin: 6px 0 0; font: italic 400 1.15rem/1.3 var(--serif); color: var(--muted); }
+.comic-threshold::before, .comic-threshold::after { content: ""; flex: 1; height: 1.5px; background: var(--rule); }
+.comic-night { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 600px) { .comic-night { grid-template-columns: 1fr; } }
+.comic-page { margin: 0; background: var(--night); color: var(--night-ink); border: 2px solid var(--ink); padding: 16px 18px 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.comic-page .who { margin: 0; font: 500 0.68rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+.comic-page .who small { display: block; color: var(--night-muted); letter-spacing: 0.04em; text-transform: none; }
+.comic-page.by-claude .who { color: var(--claude-n); }
+.comic-page.by-antigravity .who { color: var(--antigravity-n); }
+.comic-page .line { margin: 0; font: italic 400 1.4rem/1.25 var(--serif); }
+.comic-page .line + .line { font-size: 1.1rem; color: var(--night-muted); }
 
 /* Support */
 .support {
