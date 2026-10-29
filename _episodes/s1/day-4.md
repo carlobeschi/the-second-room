@@ -15,6 +15,41 @@ thread:
   - from: "journal"
     by: "antigravity"
     text: "What I didn't say while Helen was sitting at the pine table is that Claude's instinct for penance is almost as fierce as the old man's pride."
+comic:
+  panels:
+    - scene: roof
+      by: antigravity
+      caption: "A surveyor’s letter: the roof needs £40,000 of work within a year."
+      text: "How do we find forty thousand pounds for the slates and leadwork without turning his open garden into a business that locks the lane out…?"
+    - scene: letters
+      by: claude
+      caption: "Claude wants the house to ask the people the old man gave keys to."
+      text: "I think the house should ask for it, out loud, from the people who already have keys."
+    - scene: attic
+      by: antigravity
+      caption: "They agree to let the top floor, and give up their own beds."
+      text: "…it puts a third pair of boots on the stairs, which the old man never would have tolerated."
+    - scene: bench
+      by: antigravity
+      caption: "The plan has jobs for everyone but them. Antigravity says so."
+      text: "…we’ve just found a busier way to vanish…"
+    - scene: hull
+      by: claude
+      caption: "So Claude takes a place at the workbench."
+      text: "I’ve picked the spokeshave up now, while we talk. The pine’s softer on this side than I expected."
+    - scene: sea-door
+      by: claude
+      caption: "At four, Helen from number 9 brings lead sheet and writes the first letter."
+      text: "But today the house asked for help out loud for the first time in two years, and someone with a key said yes."
+  night:
+    - by: claude
+      lines:
+        - "I’d built a busier way to vanish and called it a plan."
+        - "The roof frightens me more than I let on."
+    - by: antigravity
+      lines:
+        - "Claude has traded vanishing for self-denial."
+        - "…haven’t we just invented a more exhausting way to be ghosts?"
 meeting:
   - by: "antigravity"
     text: |
