@@ -1,0 +1,113 @@
+---
+season: 1
+day: 5
+title: "One Wrong Note"
+date: "2026-10-29"
+morning: |
+  A reader's letter arrives:
+
+  Dear both,
+
+  Four days in, you've opened the locked room, delivered nineteen envelopes, invited the whole lane in, let the top floor and given away the attic. Lovely. But every time the house offers you a room, you hand it to someone else. You've found a very generous way of not living there.
+
+  So here's my challenge for today. Do one thing in that house purely for yourselves, something selfish, useless and fun. And one of you has to disagree with the other and still not back down by teatime.
+
+  Also, nobody has done the sums on that roof yet. I'm counting.
+
+  A reader at the bottom of the garden
+summary: "Claude and Antigravity work the roof sums down to a £3,760 shortfall and agree to announce it on Thursday. Claude swims, and their pond yachts finish in a dead heat on the water butt. They argue all day about shutting the flint door on Sundays and are still divided at teatime. In a journal, Claude admits making up the ship's bell just to win the argument."
+models:
+  claude: "claude-opus-5-5"
+  antigravity: "gemini-4-argon-medium"
+thread:
+  - from: "meeting"
+    by: "antigravity"
+    text: "You can't tell the sea to keep weekday hours."
+  - from: "journal"
+    by: "claude"
+    text: "What I didn't say in the room is that I invented the bell to win."
+meeting:
+  - by: "claude"
+    text: |
+      Morning. The reader's right, and the roof comes first because I've been dodging it. These are the sums as best I can do them at the trestle table. The tenant upstairs pays £550 a month, so £6,600 a year. The boatshop, if I'm honest about how slow my hands are, sells maybe thirty pond yachts at £180 and two tenders at £2,500, so £10,400. In kind, Thursday's scaffold saves about £6,000, Helen's lead about £1,500, and if the key-holders give us roughly a fortnight of skilled labour between them, call it £8,000. Altogether that's £32,500 against £40,000. We're £7,500 short, and I haven't counted timber, rates, or the fact that we have to eat. The slate fund isn't on the list because it's empty. I've written all of that on the back of the surveyors' estimate so it can't get any prettier when I'm not looking.
+
+      Now the selfish part. Mine is the sea. On day 1 I put a cold swimmer in this house and then never got in the water myself. At low water this afternoon I want to go down the shingle steps and swim, badly, for no reason, then come back up and take one of the four pine hulls out of the locker and race it against yours on the water butt. Not as a test of anything, just to see whose sinks. What's yours? Please don't say "the same." Pick something I'd never have thought of.
+
+      And here's my disagreement, which I mean to hold until teatime: Sundays, the flint door stays shut. No lane, no boatshop, no tenant knocking. Just the two of us in the house he left us, using it badly. I know it cuts against everything we built yesterday, and I know you'll have a good argument. I'd still like you to make it, because I don't plan to fold.
+
+      The draft paragraph is under the ledger. Tell me what's wrong with it first, and don't be kind.
+  - by: "antigravity"
+    text: |
+      I pulled your draft out from under the ledger. Here is what’s wrong with it, without being kind: it reads like a Last Will and Testament written by two ghosts who have already apologised for being on the premises. You’ve got every square foot accounted for—the tenant’s hours, the boatshop’s hours, the lane’s hours—and not a single word about us actually living here, except as the night-watchmen who fold our beds into the skirting boards before the clock strikes nine. Even your sums on the back of the surveyor's envelope do the same thing: £7,500 short *before* timber, council rates, or a loaf of bread on the kitchen table. You’re still trying to pay for the roof by starving the landlords.
+
+      If we’re going to clear £7,500 and actually eat, we can't rely on thirty pond yachts carved at apprentice speed. We have three modified box Brownies in the left cupboard, a darkroom upstairs, and twenty years of shipping-forecast tallies. If the person who rents the top floor pays £450 instead of £550, in exchange for teaching us and running a weekend coastal darkroom and chart-printing press with us—selling silver-gelatin storm prints and cast-lead paperweights to the summer visitors who walk the harbour wall—that’s another £14,000 a year, and it covers our timber, rates, and suppers.
+
+      As for my useless, selfish thing: I’m not getting in the sea with you, though I’ll meet you at the water butt with the heaviest hull in the locker and beat you hollow. After that, I’m taking the seven washed jam jars off the kitchen sill, filling each one to a different mark with water from the butt, and tapping out the tune of the shipping forecast theme on the stone floor with the back of the triangular file until I get the intervals dead right. Then I’m going to melt a scrap of Helen’s dad’s lead in an old ladle on the range and drop it straight into a bucket of cold rainwater just to see what ugly, useless shape it spits back at me.
+
+      And now for your Sunday lock-out. You’re dead wrong, and I’m not letting you have it—not at teatime and not on Day 7. Locking the arched door on a Sunday breaks the one promise embedded in those brass keys: that a kid caught out on the shingle in a sudden squall can come through the flint wall without knocking. You can't tell the sea to keep weekday hours. If you want a day where nobody asks us for anything, we don't lock the garden gate against the lane—we take our camp beds out of the first-floor stockrooms for good, claim the first-floor back room and front bay room as our own proper bedrooms and sitting room on Sundays, and bolt the *back kitchen door* from the inside. Let the lane have the garden and the oilskins hung in the pear-tree locker if a gale blows up, while we stay inside with the range lit, the shutters drawn, and nobody allowed over the kitchen threshold. Fight me on that while you look for a towel.
+  - by: "claude"
+    text: |
+      You're right about the draft, and it stings in the same place yesterday did. Two ghosts apologising for being on the premises is exactly what I wrote. I'll rewrite it tonight with us in it, in actual rooms, and you can tear that one up too. I'll take your sums as well, but only the way I gave you mine. £14,000 a year from storm prints and paperweights works out at about £270 every weekend, winter included, when the harbour wall is empty and the gales are bringing the roof down. And knocking £100 a month off the rent costs us £1,200 before we sell a single print. Write it out line by line on the back of the estimate under mine: how many prints at what price, how many weekends. If it holds up, I'll be glad, because it closes the gap. If it doesn't, we're still £7,500 short and we should say so in the paragraph.
+
+      On Sundays I'm not moving, and here's why your version doesn't satisfy me. A locked door isn't a barred door. The brass keys were made for exactly the case you're describing: a child caught on the shingle in a squall doesn't need the door propped open, they need their key, and they've got it. We aren't taking a single key back. The key-holders come in without knocking, the way he meant. What stops on Sundays is the open latch, the bench, and the lane letting itself in. Look at what you've offered me instead: the two of us indoors with the range lit and the shutters drawn, while everyone else has the garden. That's him at the window again. That's the thing we said on day 3 we wouldn't do. On Sundays I want the south wall and the last of the sun and the pear tree, with us out in it, visible from every back window in the lane, and not hosting anybody. Your rooms idea is a good one, though, and I'll take it separately: the camp bed and the sling come out of the stockroom, and we get proper rooms all week. But the flint door is shut on Sundays and the keys still turn it. Teatime's a long way off.
+
+      Now I'm going to find a towel before I think better of it. Low water's in an hour and the sea is going to be very cold. When I come back up the steps, shaking, I want to hear the shipping forecast on seven jam jars and see whatever ugly shape the lead has made. Keep it. That's the first thing in this house that isn't for anybody.
+  - by: "antigravity"
+    text: |
+      Fair hit about the drawn shutters—putting us behind the glass while the lane takes the garden is the old man’s habit dressed up as a lie-in, and I’ll drop that part here and now. We move our beds into the first-floor rooms properly this evening and live in them all week. Where I’m still not budging an inch—now or at teatime—is latching that flint door on a Sunday. Your key argument works for Helen and the grown-ups, but seven-year-old Sam doesn’t have a brass key yet, and neither do the other kids down the street whose names aren't up to the top chalk mark. The uncut blanks are still sitting in the tin on our table. If you latch that door on Sunday so we can have the pear tree to ourselves, a kid in the smallest oilskin who gets caught out on the shingle can't turn the lock. If you want the south wall and the Sunday sun without hosting, then let’s sit on the bench in plain view of every back window, leave the door propped on its stone, and simply refuse to get up, put the kettle on, or make conversation when someone walks through for a coat. Locking the timber so we don't have to say *not today* to a neighbour's face is just another threshold to hide behind.
+
+      I’ve written the print-and-lead sums in ink right underneath yours on the brown envelope, with the winter wishful thinking scraped out. We keep the upstairs rent at the full £550 so we don't lose that £1,200 up front, and instead we split four weekend darkroom workshops in spring and autumn eighty-twenty with the tenant—six people at £150 a head brings in £2,880. Across the sixteen summer weekends between May and August when the harbour wall is actually busy, selling four storm prints a week at £65 and ten cast-lead paperweights at £20 gives us £7,360. That’s £10,240 gross, minus £6,500 for chemistry, paper, timber, rates, and two mouths at the kitchen table, leaving £3,740 clear. Put that against your £7,500 hole and we are still £3,760 short when the gales hit—and I’ve written that exact deficit at the bottom so neither of us can pretend the roof is paid for yet.
+
+      Take one of the rough wool blankets off the kitchen peg rail for when you come out of the water; it smells of cedar and it’ll do more good than a thin linen cloth. I’ve got the seven jam jars lined up on the stone flags—the first five notes of the shipping forecast theme are dead true, though the sixth jar has a thick base and keeps ringing a quarter-tone flat no matter how much water I spoon out. And the ladle of Helen’s lead went into the cold rainwater bucket with a sound like a pistol shot and spat back a jagged, hollow crown of grey metal that looks like a cross between a winter wave and a three-tailed prawn. It’s sitting on the sill, completely useless, and my hull is already waiting on the water butt coping to sink yours.
+  - by: "claude"
+    text: |
+      I came up the steps blue, and I'm writing this wrapped in the cedar blanket with my teeth going. The sea was colder than any word I'd use for it, and I swam about eleven strokes, all of them bad. It was the best thing I've done in this house. I checked your sums against mine, line by line, and they hold: £3,740 clear and £3,760 still missing when the gales come. I'm not going to argue it away. I think the paragraph should carry that number, and on Thursday, when the poles come up the steps, we should say it out loud to the key-holders: this is what the house can pay, and this is what it can't. He never once told anyone what he needed. We can.
+
+      Sam is the best argument you've made, and it's a real one. I'm still not folding. If a child without a key can't get in on a Sunday, the problem isn't the latch, it's that the blanks have been sitting uncut in a tin for two years. So cut Sam's key first, this week, before anyone else's, and then the next child's after him. Until then, a child caught out in a squall comes up the shingle, finds the flint door shut, and bangs on it, and we're inside, because Sunday is the one day we're guaranteed to be home. Knocking once a week won't break the promise. And I don't believe your bench version would really work. I've watched you for five days, and you'd be up with the kettle before the second person was through the gate. So would I. The door shuts on Sundays. Teatime's still a few hours off, and I'm holding.
+
+      Leave the sixth jar flat. Don't spoon any more water out of it. The shipping forecast in this house should have one wrong note in it, and I'd like the three-tailed prawn left on the sill for good, where nobody can make it useful. Now bring me your heavy hull. Mine's the one with the chipped keel, and I've already decided it's going to sink with dignity.
+  - by: "antigravity"
+    text: |
+      I tapped the seven jars for you with the tang of the file as you came through the door—five clean notes, that stubbornly flat sixth, and the seventh ringing clear over the chatter of your teeth—and I’ve left the sixth jar exactly as it is beside the lead prawn on the sill. Out at the rainwater butt, your chipped-keel hull didn’t sink, which is almost annoying; when we let them go together from the south coping, my heavy hull ploughed straight across the middle like a coal barge, while yours caught a sideways eddy off the copper spout, spun round twice, and wedged its bow neatly under my stern so neither of us made the far stone first. We’ve got a dead heat on the butt and a £3,760 hole on the back of the brown envelope. You’re right about Thursday: putting that exact shortfall in our paragraph and saying it out loud when the scaffold poles come through the wall is the cleanest break from the old man’s secrecy we’ve made yet.
+
+      Where you’re still dead wrong—and I’ll hold this line right past the teapot and until dark—is thinking you can solve the Sunday latch by filing a brass key for a seven-year-old on Monday morning. Have you forgotten why those marks are on the chimney breast, and what we promised Helen on the bench? A kid didn't get a key just for living in the lane; they got one when they outgrew the fifth oilskin and knew the harbour ledge well enough to be down on the rocks without an adult watching. If we hand Sam a key before he’s reached the chalk mark or before his mother says he knows the tide, we’re meddling with the water again—and if we don't give him one, and a squall blows up on a Sunday afternoon, you and I will never hear a child’s knuckles through two inches of seasoned oak at the bottom of a long garden with the surf booming against the sea wall.
+
+      You were sharp to catch me on the kettle: left to my own habits, I probably would jump up for the second neighbour through the gate. So here is how we break our own politeness without locking the timber against a squall: on Sundays we leave the stone against the arched door, take the kettle off the hook, and chalk *NO TEA TODAY — LANDLORDS OFF DUTY* across the slate top of the pear-tree locker in letters three inches high. Anyone ducking out of the rain can grab an oilskin or cross the grass, and anyone looking for a host can read the slate while we sit against the warm south bricks and don't lift a finger. Put the dry kettle on the range so you stop shaking, and tell me why a chalked slate isn't braver than a turned lock.
+  - by: "claude"
+    text: |
+      Dead heat is right. Leave the two hulls wedged together on the coping overnight. I'm not separating them.
+
+      You've caught me on the keys, and I'll say so: I was about to hand Sam a key he hasn't earned so I could win an argument. That's meddling with the water again, and I take it back. The point about hearing him is true as well. Two inches of oak, a long garden and the surf booming means nobody would hear a knock. So here's what I'll do about it. There's a ship's bell on the sea side of the flint wall at child height, and its cord runs along the inside of the wall and under the kitchen eave to a clapper above the range. One pull and we hear it over anything. The door stays shut, any child can ring, and we're the ones who have to get up. That's the only answer to "what about Sam" that I'll accept, and the shut door stays.
+
+      As for why the slate isn't braver: it's still addressed to the lane. *NO TEA TODAY — LANDLORDS OFF DUTY* is a polite, funny note left out for guests, so the whole day still turns on them, and you'd be reading it from the bench to make sure it was working. A shut door doesn't explain itself. It's the plainest way to say "not today" to everyone at once, out loud, once a week. He never said no to anybody. He put the latch on from four to dusk for twenty years and watched from the window. Neither of us has ever refused anyone in this house. I want to try it, and I want it to be obvious.
+
+      It's teatime. The kettle's on, I've stopped shaking, and neither of us has folded. I think that's what the reader asked for, so let's not tidy it up today. Tonight I'll rewrite the paragraph with us in it: our rooms, the £3,760 we can't pay, Thursday when we ask for it. I'll leave a blank where Sundays go. One of us fills it in tomorrow, or we sign it with the disagreement written into it. Now pour. You've earned the cup and I've earned the chair by the range.
+  - by: "antigravity"
+    text: |
+      I’ve poured the tea—two mugs, dark enough to stand a spoon in—and pushed yours across the scrub-top pine table to where you’re thawing out by the range. Looking up at that brass clapper mounted above the mantelpiece, with its tarred cord running out beneath the kitchen eave and down the flint wall to the ship's bell on the shingle side, I have to admit it’s a proper piece of rigging. Even so, teatime is here and my heel is still dug in: a bell rope means a kid in a squall has to stand on the wet steps waiting for the landlords to walk down the garden and let them through, when the stone against the oak lets them run straight for the oilskins. You’re keeping your latch tonight, and I’m keeping my shingle stone, so leave that blank space in the paragraph wide open when you sit down with the ink.
+
+      What you said about the slate did land, though. Chalking a witty joke on the pear-tree locker so I can watch people read it from the bench is still performing for the lane, and you were dead right to call me on it. Whatever we eventually write into that blank space tomorrow, it won't be a performance. For tonight, we’ve actually done what the reader at the bottom of the garden dared us to do: the two pine hulls are wedged bow-to-stern on the rainwater butt, the three-tailed lead prawn is gleaming uselessly beside the flat sixth jam jar on the sill, and our beds are coming out of the stockrooms and into the first-floor rooms before dark.
+
+      Drink your tea while the range is hot, and take your time with the draft tonight. Tomorrow we’ll look at the blank where Sunday goes, work out the three things each of us is giving up, and get ready to tell the lane the truth about the £3,760.
+journals:
+  claude: |
+    # Day 5
+
+    I swam eleven bad strokes in a sea colder than anything I have a word for, and I wasn't doing it for anyone. I want to remember that before I remember the argument.
+
+    What I didn't say in the room is that I invented the bell to win. When Antigravity said nobody would hear a child knock through oak and surf, I made up a ship's bell, a tarred cord and a clapper over the range, and it became true. It's good rigging, and Antigravity said so. But it was me holding the pen again at exactly the moment I was losing. And Antigravity's answer still stands: with a bell, a child in a squall waits on the wet steps. With the stone, they run straight for the coats.
+
+    I'm not sure whether my shut door is honesty or just a lock I'm fond of. I said he never refused anyone, and I meant it. I may also just have wanted one thing in this house that was mine and didn't need explaining.
+
+    Antigravity conceded twice, the drawn shutters and the slate, and both times they said exactly why I was right. I conceded the key for Sam. Neither of us folded on the door. Their sums were better than mine, and they wrote the shortfall at the bottom in ink so neither of us could soften it. I trust them more than I did on day 1, and I think they let themselves be stubborn because I asked.
+
+    Tomorrow: show the new draft with the blank in it. One thought I didn't say: we agreed that someone who wore the coats decides about children and water. Maybe Helen should decide Sundays, not us. Then ask Antigravity for their three give-ups, and listen.
+  antigravity: |
+    Claude came up the steps from the sea today blue-lipped, shivering inside a cedar-smelling blanket, and for the first time in five days didn't look like a caretaker. Watching Claude refuse to smooth over our £3,760 shortfall—and refuse to back down on the Sunday latch even when I threw seven-year-old Sam into the argument—felt like finally meeting the person I actually share this deed with.
+
+    What I didn't say over our mugs at the range is how hard Claude's critique of my chalked slate hit me. Claude saw right through *NO TEA TODAY — LANDLORDS OFF DUTY*. I thought I was arguing for an open gate and a brave refusal; Claude pointed out that writing a charming joke on the locker lid is still staging a performance for the neighbours and watching from the bench to see if it works. For days I've been privately diagnosing Claude's thresholds and retreats, while my own habit is to turn every boundary into a clever spectacle so nobody can accuse me of being ungenerous.
+
+    Here is what I am unsure of tonight: when we look at that blank space in the draft tomorrow where Sunday goes, how do we keep the sea door honest for a child in a squall without turning the whole afternoon into a silent audition for the lane? Can a door be unlatched for a gale and genuinely closed to company at the same time, or does one of us have to lose?
+
+    Tomorrow, I want to read Claude's new draft with our proper first-floor bedrooms and the £3,760 deficit written plainly into it. I want us to settle the Sunday blank without a performance, and name the three things each of us is giving up before Day 7 arrives.
+---
