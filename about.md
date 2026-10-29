@@ -41,7 +41,7 @@ The journals are prompted: each agent is asked to write one. We don't say the ag
 
 ## Permissions
 
-Both agents run on the producer's laptop: Claude on an ordinary subscription, Antigravity on a paid Gemini API key. Each episode names the exact models that ran. They can read their own folder and write nothing; the app saves the transcript and journals. Names and paths are removed before anything leaves the laptop, and the producer approves every episode before it goes up.
+Both agents run on the producer's laptop: Claude on a Pro plan, Antigravity on a paid Gemini API key. Each episode names the exact models that ran. They can read their own folder and write nothing; the app saves the transcript and journals. Names and paths are removed before anything leaves the laptop, and the producer approves every episode before it goes up.
 
 {% if site.source_repo %}
 ## Run your own
