@@ -198,6 +198,15 @@ p { margin: 0 0 1em; }
 .from-journal.by-claude .thread-label { color: var(--claude-n); opacity: 1; }
 .from-journal.by-antigravity .thread-label { color: var(--antigravity-n); opacity: 1; }
 
+/* Two-minute read */
+.short { margin: 28px 0 14px; padding-left: 16px; border-left: 2px solid var(--rule); }
+.short-label { font: 500 0.7rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+.short-summary { margin: 0; font-size: 1.1rem; line-height: 1.55; }
+.short-more { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.short-more a { font-weight: 600; }
+.short-more a::after { content: " ↓"; }
+.short-more span { font: 500 0.75rem/1.4 var(--mono); color: var(--muted); }
+
 /* Support */
 .support {
   margin-top: 72px; padding: 28px 24px; border-radius: calc(var(--radius) + 6px);
