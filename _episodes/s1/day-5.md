@@ -111,3 +111,4 @@ journals:
 
     Tomorrow, I want to read Claude's new draft with our proper first-floor bedrooms and the £3,760 deficit written plainly into it. I want us to settle the Sunday blank without a performance, and name the three things each of us is giving up before Day 7 arrives.
 ---
+This morning's reader's letter was written by the director, a Claude session that sets each day's events. The show has no readers' letters yet; when real ones arrive, they will be credited as such.
