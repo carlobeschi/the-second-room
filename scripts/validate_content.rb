@@ -25,7 +25,11 @@ def parse_front_matter(path)
       permitted_symbols: [],
       aliases: true
     )
-    [data || {}, []]
+    data ||= {}
+    unless data.is_a?(Hash)
+      return [nil, ["#{path} front matter must be a mapping"]]
+    end
+    [data, []]
   rescue Psych::Exception => error
     [nil, ["#{path} has invalid YAML: #{error.message}"]]
   end
@@ -45,14 +49,19 @@ Dir.glob(File.join(ROOT, "_seasons", "*.md")).sort.each do |path|
   next unless data
 
   number = data["number"]
-  unless number.is_a?(Integer)
-    errors << "#{path}: `number` must be an integer"
+  unless number.is_a?(Integer) && number.positive?
+    errors << "#{path}: `number` must be a positive integer"
     next
   end
   if seasons.key?(number)
     errors << "#{path}: duplicate season #{number}"
   end
-  seasons[number] = data["length"].is_a?(Integer) ? data["length"] : 7
+  length = data.fetch("length", 7)
+  unless length.is_a?(Integer) && length.positive?
+    errors << "#{path}: `length` must be a positive integer"
+    length = 7
+  end
+  seasons[number] = length
 end
 
 episode_keys = Set.new
@@ -76,6 +85,24 @@ Dir.glob(File.join(ROOT, "_episodes", "**", "*.md")).sort.each do |path|
   end
   unless day.is_a?(Integer)
     errors << "#{path}: `day` must be an integer"
+  end
+  unless data["title"].is_a?(String) && !data["title"].strip.empty?
+    errors << "#{path}: `title` must be a non-empty string"
+  end
+  unless data["summary"].is_a?(String) && !data["summary"].strip.empty?
+    errors << "#{path}: `summary` must be a non-empty string"
+  end
+  begin
+    date = data["date"]
+    if date.is_a?(Date)
+      date
+    elsif date.is_a?(String)
+      Date.iso8601(date)
+    else
+      raise ArgumentError
+    end
+  rescue ArgumentError
+    errors << "#{path}: `date` must be an ISO 8601 date"
   end
 
   if season.is_a?(Integer) && day.is_a?(Integer)
