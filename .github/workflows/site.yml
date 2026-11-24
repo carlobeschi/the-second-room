@@ -24,4 +24,10 @@ jobs:
         run: ruby scripts/validate_content.rb
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --destination ./_site/the-second-room
+
+      - name: Check generated HTML, accessibility basics, and links
+        run: >-
+          bundle exec htmlproofer ./_site/the-second-room
+          --root-dir ./_site
+          --ignore-urls '/fonts.googleapis.com/,/fonts.gstatic.com/,/ko-fi.com/'
