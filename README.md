@@ -81,6 +81,12 @@ bundle exec jekyll serve      # http://localhost:4000
 
 The Gemfile pins the `github-pages` gem, so the local build matches the live one.
 
+Pull requests also check the generated site with HTML-Proofer for broken internal
+links and anchors, missing image alt text, script references, and external links.
+Google Fonts endpoints and Ko-fi are excluded because their connection endpoints
+and anti-bot responses cannot be checked reliably. This catches common markup and
+accessibility issues; it is not a full WCAG audit.
+
 ## Files
 
 | Path | What |
